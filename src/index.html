@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
-    <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+    <meta
+      name="description"
+      content="Your online book library"
+    />
+    <meta name="keywords" content="book, books,  library, liblary online" />
+    <meta name="authors" content="projekt-grupa-6" />
+    <title>Bookshelf</title>
+    <link rel="stylesheet" href="./sass/main.scss" />
   </head>
-  <body>
-    will it work? - testing 
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+
+  <body class="body">
+
+    <!-- W taki sposbu dodajemy fragmenty w główny HTML-plik strony. -->
+    
+    <!-- Header -->
+    <include src="./partials/_header.html"></include>
+
+    <!-- List of categories -->
+    <include src="./partials/_categoriesList.html"></include>
+
+    <!-- JS  przykłady dodawania
+    <script defer src="./partialsJs/_nazwa waszego pliku.js"></script>
+    <script defer src="./partialsJs/_nazwa waszego pliku.js"></script>
+    -->
   </body>
 </html>
