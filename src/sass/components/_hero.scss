@@ -1,0 +1,124 @@
+.hero {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+
+  // aside panels category list and support ukraine
+  &__aside {
+    flex-basis: 200px;
+  }
+  &__aside-categorylist {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 20px;
+    border: 5px dashed red;
+    margin-left: 24px;
+    margin-bottom: 86px;
+  }
+  &__aside-categorylist-list {
+    display: flex;
+    width: 328px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+  }
+  &__aside-categorylist-item {
+    width: 318px;
+    color: rgba(17, 17, 17, 0.6);
+
+    font-family: DM Sans;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 133.333% */
+    letter-spacing: -0.36px;
+  }
+  &__aside-supportUkraine {
+    width: 356px;
+    height: 474px;
+    flex-shrink: 0;
+    border: 5px dashed blue;
+    margin-left: 24px;
+  }
+  &__aside-supportUkraineList {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  &__aside-supportUkraineItem {
+    width: 131px;
+    height: 32px;
+    flex-shrink: 0;
+  }
+  // main content blocks with categories and books informations
+  &__main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    border: 5px dashed red;
+    margin-left: 40px;
+    color: #b4afaf;
+
+    font-family: DM Sans;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 171.429% */
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+  }
+
+  &__main-booksBlockList {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    padding: 0px;
+  }
+
+  &__main-booksBlockItem {
+    display: flex;
+    width: 180px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  &__main-booksBlockImg {
+    border-radius: 8px;
+  }
+
+  &__main-booksBlockTitle {
+    color: #111;
+    font-family: DM Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px; /* 112.5% */
+    letter-spacing: -0.64px;
+  }
+
+  &__main-booksBlockDesc {
+    color: #111;
+
+    font-family: DM Sans;
+    font-size: 12px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: -0.48px;
+  }
+  &__main-booksBlockButton {
+    display: flex;
+    padding: 14px 28px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 40px;
+    border: 2px solid #4f2ee8;
+  }
+}
