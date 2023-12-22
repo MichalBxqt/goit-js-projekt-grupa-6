@@ -1,0 +1,23 @@
+.header {
+  margin-bottom: 40px;
+  &__container {
+    height: 72px;
+    flex-shrink: 0;
+    border-radius: 0px 0px 8px 8px;
+    border: 5px dashed red;
+    background: #fff;
+  }
+  &__logo {
+    display: inline-flex;
+    height: 28px;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+  }
+
+  &__nav-desktop {
+    display: inline-flex;
+    align-items: center;
+    gap: 24px;
+  }
+}
