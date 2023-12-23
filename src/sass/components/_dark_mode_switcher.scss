@@ -1,0 +1,54 @@
+#darkSwitch {
+  display: none;
+}
+
+label {
+  width: 40px;
+  height: 20px;
+  position: relative;
+  display: block;
+  background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1) inset;
+  border-radius: 200px;
+  cursor: pointer;
+  /* kolorystyka ściągnieta bezpośrednio z figma */
+}
+
+label:after {
+  content: '';
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  background: rgba(247, 247, 247, 1);
+  border-radius: 180px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+label p {
+  display: none;
+}
+
+input {
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+input:checked + label {
+  background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
+  box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1) inset;
+  /* kolorystyka ściągnieta bezpośrednio z figma */
+}
+
+input:checked + label:after {
+  right: 24px;
+  transform: translateX(110%);
+  background: rgba(255, 255, 255, 1), rgba(247, 247, 247, 1);
+}
+
+label,
+label:after {
+  transition: 0.3s;
+}

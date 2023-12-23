@@ -1,10 +1,16 @@
-.body{
-    background-color: var(--white); 
-    color: var(--black);
-    font-size: 14px;
-    font-family: 'DM Sans';
-    font-style: normal;
-    font-weight: var(--bold);
-    line-height: 1.2;
-    letter-spacing: -0.56px;
+.body {
+  background-color: var(--white);
+  color: var(--black);
+  font-size: 14px;
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: var(--bold);
+  line-height: 1.2;
+  letter-spacing: -0.56px;
+}
+
+/* darkMode styles */
+[data-theme='dark'] {
+  background-color: var(--black-cat);
+  color: var(--white);
 }
