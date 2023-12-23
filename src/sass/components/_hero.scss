@@ -122,3 +122,10 @@
     border: 2px solid #4f2ee8;
   }
 }
+
+/* dark mode Styles for her section */
+
+[data-theme='dark'] .hero__main-booksBlockButton {
+  background-color: #111;
+  color: white;
+}
