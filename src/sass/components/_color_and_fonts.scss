@@ -1,0 +1,18 @@
+$cubic: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
+:root {
+  --regular: 400; 
+  --medium: 500; 
+  --bold: 700; 
+  --italic: italic;
+  --black: #111;
+  --black-cat: rgba(17, 17, 17, 0.6);
+  --white-cat: rgba(255, 255, 255, 0.6);
+  --grey-400: #B4AFAF;
+  --white: #ffffff;
+  --purple: #4f2ee8;
+  --yellow: #EAC645;
+  --filter-light: 0%;
+  --filter-dark: invert(100%);
+}
