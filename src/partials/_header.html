@@ -1,4 +1,70 @@
-<header class="header">
+
+      <header>
+        <div class="header">
+          <!-- <include src="./_loader.html"></include> -->
+          
+          <div class="header__content">
+            <a class="header__logo" href="/src/index.html">
+              <svg class="logo__icon" width="24" height="24">
+                <use href="/src/images/sprite.svg#icon-logo-12"></use>
+              </svg>
+              <p class="logo__title">Bookshelf</p>
+            </a>
+            <nav class="menu">
+              <ul class="menu__list" id="menu__list">
+                <li class="menu__item">
+                  <a class="menu__link" href="/src/index.html">Home</a>
+                </li>
+                <li class="menu__item">
+                  <a class="menu__link" href="/src/partials/_shopping-list.html"
+                    >Shopping list
+                    <svg class="shop" width="20" height="20">
+                      <use href="/src/images/sprite.svg#icon-uil_cart"></use>
+                    </svg>
+                  </a>
+                  <p class="books_counter is-hidden"></p>
+                </li>
+              </ul>
+              <div class="menu__substrate"></div>
+            </nav>
+            <div id="darkSwitch">
+            <input type="checkbox" /></div>
+       
+      </div>
+            
+            <button class="login-btn open-autorization-btn" type="button">
+              <p class="login-btn__title">Sign up</p>
+              <svg class="login-btn__icon" width="20" height="20">
+                <use href="/src/images/sprite.svg#icon-arrow-narrow-right"></use>
+              </svg>
+            </button>
+            <button class="logout-btn" type="button">
+              <p class="logout-btn__title">Log out</p>
+              <svg class="logout-btn__icon" width="20" height="20">
+                <use href="/src/images/sprite.svg#icon-arrow-narrow-right"></use>
+              </svg>
+            </button>
+            <button
+              class="menu__btn"
+              type="button"
+              aria-expanded="false"
+              aria-controls="menu__list"
+            >
+              <svg class="menu__icon" aria-hidden="true" width="28" height="28">
+                <use class="menu__icon-menu" href="/src/images/sprite.svg#icon-align-left"></use>
+                <use
+                  class="menu__icon-cross"
+                  href="/src/images/sprite.svg#icon-x-close-1"
+                ></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </header>
+
+
+
+      <!-- <header class="header">
   <div class="header__container">
     <div class="header__nav-bar">
       <img />
@@ -9,9 +75,9 @@
           <li class="header__nav-item"><a href="#about">Shopping list</a></li>
         </ul>
       </nav>
-      <div> <!-- slider DarkMode -->
-        <input type="checkbox" id="darkSwitch">
+      <div> <-- slider DarkMode -->
+        <!-- <input type="checkbox" id="darkSwitch">
         <label for="darkSwitch">
           <p>DarkMode</p>
         </label>
-      </div>
+      </div> --> 
