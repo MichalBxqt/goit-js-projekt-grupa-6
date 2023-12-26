@@ -1,3 +1,12 @@
+// .hero__aside-supportUkraine{
+//     width: 356px;
+//     height: 474px;
+//     border-radius: 16px;
+//     margin-left: 24px;
+//     margin-top: 86px;
+
+// }
+
 .visual-hidden {
     position: absolute;
     white-space: nowrap;
@@ -15,9 +24,9 @@
     flex: 1;
   }
   
-  .donate-container {
-    width: 100%;
-    // max-width: 356px;
+  .hero__aside-supportUkraine {
+    // width: 100%;
+    width: 356px;
     height: 352px;
     padding-left: 40px;
     padding-top: 24px;
@@ -30,16 +39,20 @@
     );
     box-shadow: 0px 10px 10px rgba(245, 245, 247, 0.1);
     border-radius: 16px;
-    margin-bottom: 40px;
+    // margin-top: -40px;
+    margin-left: 24px;
   
     @media screen and (min-width:768px) {
-        .donate-container{
+        .hero__aside-supportUkraine{
       width: 335px;
       margin-bottom: 0;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
     }}
   
     @media screen and (min-width:1200px) {
-        .donate-container{
+        .hero__aside-supportUkraine{
       width: 356;
     }}
   }
@@ -208,8 +221,8 @@
   
   
   @media screen and (min-width: 768px) {
-    .donate-container {
-      height: 472px;
+    .hero__aside-supportUkraine {
+      height: 474px;
     }
   
     .donate-header {
@@ -232,9 +245,9 @@
   }
   
   @media screen and (min-width: 1440px) {
-    .donate-container {
+    .hero__aside-supportUkraine {
       width: 356px;
-      height: 490px;
+      height: 474px;
     }
   
     .left-side {

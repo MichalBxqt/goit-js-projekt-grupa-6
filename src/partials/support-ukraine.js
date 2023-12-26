@@ -6,7 +6,7 @@ import razom from '../images/support_ukraine/razom.png';
 import save from '../images/support_ukraine/save.png';
 import sergiy from '../images/support_ukraine/sergiy.png';
 import united from '../images/support_ukraine/united.png';
-import vision from '../images/support_ukraine/vision/png';
+import vision from '../images/support_ukraine/vision.png';
 import action2x from '../images/support_ukraine/action2x.png';
 import frontieres2x from '../images/support_ukraine/frontieres2x.png';
 import hope2x from '../images/support_ukraine/hope2x.png';
