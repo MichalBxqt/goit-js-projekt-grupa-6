@@ -50,7 +50,12 @@
       flex-direction: row;
       flex-wrap: wrap;
     }}
-    
+    @media (width <= 375px) {
+      width: 335px;
+      height: 460px;
+      // padding-left: 8px;
+      // z-index: 1;
+    }
     @media screen and (min-width:1440px) {
         .hero__aside-supportUkraine{
       width: 356;
@@ -89,8 +94,8 @@
   }
   
   .donate-funds-visible {
-    width: 170px;
-    height: 220px;
+    width: 159px;
+    height: 292px;
     overflow: auto;
     scroll-behavior: smooth;
   }
@@ -157,6 +162,11 @@
     padding: 0;
     margin: 0 auto;
     margin-top: 7px;
+    @media (width <= 375px) {
+      margin-top: 20px;
+      // padding-left: 8px;
+      // z-index: 1;
+    }
   }
   
   
@@ -165,6 +175,11 @@
     align-items: center;
     justify-content: center;
     margin-top: 7px;
+    @media (width <= 375px) {
+      margin-top: 20px;
+      // padding-left: 8px;
+      // z-index: 1;
+    }
   }
   
   .donate-arrow {
@@ -175,6 +190,7 @@
     width: 20px;
     height: 20px;
     margin: auto;
+   
   }
   
   .donate-button:hover,
