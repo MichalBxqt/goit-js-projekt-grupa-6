@@ -16,9 +16,9 @@ label {
   /* kolorystyka ściągnieta bezpośrednio z figma */
   @media (width <= 768px) {
     margin-left: 101px;
-  
+    
   }
-  @media (width <= 320px) {
+  @media (width <= 375px) {
     margin-left: 144px;
   
   }
@@ -56,6 +56,7 @@ input:checked + label:after {
   right: 24px;
   transform: translateX(110%);
   background: rgba(255, 255, 255, 1), rgba(247, 247, 247, 1);
+  
 }
 
 label,
