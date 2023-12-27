@@ -1,8 +1,10 @@
 #darkSwitch {
-  display: none;
+  display: flex;
+  margin-left: auto;
 }
 
 label {
+  margin-left: 700px;
   width: 40px;
   height: 20px;
   position: relative;
@@ -12,6 +14,14 @@ label {
   border-radius: 200px;
   cursor: pointer;
   /* kolorystyka ściągnieta bezpośrednio z figma */
+  @media (width <= 768px) {
+    margin-left: 101px;
+  
+  }
+  @media (width <= 320px) {
+    margin-left: 144px;
+  
+  }
 }
 
 label:after {
@@ -39,7 +49,7 @@ input {
 input:checked + label {
   background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1) inset;
-  /* kolorystyka ściągnieta bezpośrednio z figma */
+//   /* kolorystyka ściągnieta bezpośrednio z figma */
 }
 
 input:checked + label:after {
@@ -52,3 +62,55 @@ label,
 label:after {
   transition: 0.3s;
 }
+
+
+
+// #darkSwitch {
+//   display: flex;
+//   margin-left: auto;
+//   & input[type='checkbox'] {
+//     width: 40px;
+//   height: 20px;
+//   position: relative;
+//   display: block;
+//   background: linear-gradient(180deg, #4f2ee8 0%, #dcdcdc 100%);
+//   box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1) inset;
+//   border-radius: 200px;
+//   cursor: pointer;
+//   }
+
+//   & input[type='checkbox'] {
+//     position: relative;
+//     width: 40px;
+//     height: 20px;
+//     outline: none;
+//     background: linear-gradient(var(--blue), var(--black-400));
+//     border-radius: 20px;
+//     transition: 0.5s;
+//     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+//     appearance: none;
+//     -webkit-appearance: none;
+//   }
+
+//   & input:checked[type='checkbox'] {
+//     background: linear-gradient(var(--blue), var(--swicherDark));
+//   }
+
+//   & input[type='checkbox']:before {
+//     content: '';
+//     position: absolute;
+//     width: 16px;
+//     height: 16px;
+//     border-radius: 20px;
+//     top: 2;
+//     left: 2;
+//     background: var(--swicher);
+//     transition: 0.5s;
+//     transform: scale(1.1);
+//     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+//   }
+
+//   & input:checked[type='checkbox']:before {
+//     left: 22px;
+//   }
+// }
