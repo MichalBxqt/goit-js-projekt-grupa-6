@@ -1,0 +1,51 @@
+body {
+  background-color: #f6f6f6;
+}
+
+.text-shopping {
+  color: #111;
+  font-family: DM Sans;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -1.92px;
+}
+
+.text-list {
+  color: #4f2ee8;
+  font-family: DM Sans;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 52px;
+  letter-spacing: -1.92px;
+  margin-left: 0.2em;
+}
+
+.main-title-shoplist-hidden {
+  display: flex;
+}
+
+.container-btn-arrow-left-left,
+.container-btn-arrow-left {
+  display: flex;
+  align-items: center;
+  border-color: black;
+  border-style: groove;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+#btn-arrow-left-1,
+#btn-arrow-left-2 {
+  transform: rotate(90deg);
+  fill: white;
+  color: white;
+}
+
+#btn-arrow-left-2 {
+  margin-left: -10px;
+}

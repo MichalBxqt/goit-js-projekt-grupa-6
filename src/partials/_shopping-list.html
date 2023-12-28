@@ -8,12 +8,12 @@
     <meta name="msapplication-TileColor" content="#603cba" />
     <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png" />
     <meta name="msapplication-config" content="favicon/browserconfig.xml" />
-   
+
     <link
       href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@500;700&family=Montserrat:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/src/sass/main.scss" />
+    <link rel="stylesheet" href="/src/sass/shopping-list.css" />
     <!-- <script type="module" src="./index.js"></script> -->
     <title>Page title</title>
   </head>
@@ -23,17 +23,37 @@
     <main>
       <section class="section-shopping-list">
         <div class="container container-shopping-list">
-          <h1 class="main-title-shoplist-hidden">Page of Shopping List</h1>
+          <h1 class="main-title-shoplist-hidden">
+            <div class="text-shopping">Shopping</div>
+            <div class="text-list">List</div>
+          </h1>
           <!-- Support Ukraine -->
           <div class="wrap-support">
             <include src="/src/partials/_support-ukraine.html"></include>
           </div>
           <!-- My Shopping List  -->
-          
+          <div class="container-btn-arrow-left-left">
+            <svg id="btn-arrow-left-1" width="20px" height="20px">
+              <use
+                href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"
+              ></use>
+            </svg>
+            <svg id="btn-arrow-left-2" width="20px" height="20px">
+              <use
+                href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"
+              ></use>
+            </svg>
+          </div>
+          <div class="container-btn-arrow-left">
+            <svg id="btn-arrow-left-1" width="20px" height="20px">
+              <use
+                href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"
+              ></use>
+            </svg>
+          </div>
         </div>
       </section>
     </main>
- 
-
+    <script src="/src/partials/shopping-list.js"></script>
   </body>
 </html>
