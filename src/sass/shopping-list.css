@@ -27,30 +27,7 @@ body {
   display: flex;
 }
 
-.container-btn-arrow-left-left,
-.container-btn-arrow-left {
-  display: flex;
-  align-items: center;
-  border-color: black;
-  border-style: groove;
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background-color: black;
-}
-
-#btn-arrow-left-1,
-#btn-arrow-left-2 {
-  transform: rotate(90deg);
-  fill: white;
-  color: white;
-}
-
-#btn-arrow-left-2 {
-  margin-left: -10px;
-}
-
-/* ------ */
+/* ---BOOK CARDS--- */
 .book-card-position {
   text-align: left;
 }
@@ -83,4 +60,80 @@ body {
   margin-top: 10px;
   text-decoration: none;
   color: #007bff;
+}
+
+/* ---- BUTTONS_PAGES ---- */
+.container-btn-arrow-left-left,
+.container-btn-arrow-left {
+  display: flex;
+  align-items: center;
+  border-width: 1px;
+  border-color: rgba(17, 17, 17, 1);
+  border-style: groove;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(17, 17, 17, 1);
+}
+
+#btn-arrow-left-1,
+#btn-arrow-left-2 {
+  transform: rotate(90deg);
+  fill: rgba(180, 175, 175, 1);
+  color: rgba(180, 175, 175, 1);
+}
+
+#btn-arrow-left-2 {
+  margin-left: -15px;
+}
+
+#page-1,
+#page-2,
+#page-3,
+#page-more {
+  display: flex;
+  align-items: center;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 1);
+  color: #111;
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 22px;
+  border-style: groove;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #f6f6f6;
+}
+
+.container-btn-arrow-right-right,
+.container-btn-arrow-right {
+  display: flex;
+  align-items: center;
+  border-width: 1px;
+  border-color: rgba(0, 0, 0, 1);
+  border-style: groove;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(234, 198, 69, 1);
+}
+
+#btn-arrow-right-1,
+#btn-arrow-right-2 {
+  transform: rotate(-90deg);
+  fill: rgba(0, 0, 0, 1);
+  color: rgba(0, 0, 0, 1);
+}
+
+#btn-arrow-right-2 {
+  margin-left: -15px;
+}
+
+.container-btns-slider,
+.container-btns-pages {
+  display: flex;
+  text-align: center;
 }
