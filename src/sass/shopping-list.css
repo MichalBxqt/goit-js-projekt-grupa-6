@@ -51,16 +51,21 @@ body {
 }
 
 /* ------ */
+.book-card-position {
+  text-align: left;
+}
+
 .book-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  text-align: left;
   max-width: 400px;
-  margin: 0 auto;
   border: 1px solid #ccc;
   padding: 20px;
+  border-radius: 16px;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  background: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
 }
 
 #cover {
