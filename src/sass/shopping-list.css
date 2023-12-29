@@ -49,3 +49,38 @@ body {
 #btn-arrow-left-2 {
   margin-left: -10px;
 }
+
+/* ------ */
+.book-card-position {
+  text-align: left;
+}
+
+.book-card {
+  text-align: left;
+  max-width: 400px;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 16px;
+  border: 2px solid rgba(79, 46, 232, 0.4);
+  background: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+#cover {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.book-details {
+  text-align: left;
+}
+
+#buy-links a {
+  display: block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #007bff;
+}
