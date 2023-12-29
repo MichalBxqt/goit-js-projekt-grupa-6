@@ -1,47 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Your online book library" />
+    <meta name="keywords" content="book, books,  library, liblary online" />
+    <meta name="authors" content="projekt-grupa-6" />
+    <title>Bookshelf</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
+      integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
+      crossorigin="anonymous"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@500;700&family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./sass/main.scss" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Your online book library" />
-  <meta name="keywords" content="book, books,  library, liblary online" />
-  <meta name="authors" content="projekt-grupa-6" />
-  <title>Bookshelf</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
-    integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
-    crossorigin="anonymous" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@500;700&family=Montserrat:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./sass/main.scss" />
-</head>
+  <body class="body">
+    <!-- W taki sposbu dodajemy fragmenty w główny HTML-plik strony. -->
 
-<body class="body">
+    <!-- Header -->
+    <include src="./partials/_header.html"></include>
 
-  <!-- W taki sposbu dodajemy fragmenty w główny HTML-plik strony. -->
+    <!-- List of categories -->
+    <include src="./partials/_hero.html"></include>
+    <include src="./partials/_category.html"></include>
+    <include src="./partials/_support-ukraine.html"></include>
 
-  <!-- Header -->
-  <include src="./partials/_header.html"></include>
- 
+  <include src="./partials/_popup.html"></include>
 
-  <!-- List of categories -->
-  <include src="./partials/_hero.html"></include>
-  <include src="./partials/_support-ukraine.html"></include>
-  
-  
-
-  <!-- JS  przykłady dodawania
+    <!-- JS  przykłady dodawania
     <script defer src="./partialsJs/_nazwa waszego pliku.js"></script>
     <script defer src="./partialsJs/_nazwa waszego pliku.js"></script>
   
     -->
+  <script src="./partials/_popup.js"></script>
   <script src="./partials/dark-mode-switch.min.js"></script>
   <script type="module" src="./partials/support-ukraine.js"></script>
   <script type="module" src="./partials/loader.js"></script>
   <script type="module" src="./partials/header.js"></script>
+    <script type="module" src="./index.js"></script>
 </body>
 
 </html>
