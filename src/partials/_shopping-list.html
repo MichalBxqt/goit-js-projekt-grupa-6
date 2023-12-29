@@ -14,6 +14,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="/src/sass/shopping-list.css" />
+
     <!-- <script type="module" src="./index.js"></script> -->
     <title>Page title</title>
   </head>
@@ -32,6 +33,16 @@
             <include src="/src/partials/_support-ukraine.html"></include>
           </div>
           <!-- My Shopping List  -->
+          <div class="book-card">
+            <img id="cover" alt="Okładka książki" />
+            <div class="book-details">
+              <h1 id="title"></h1>
+              <p id="category"></p>
+              <p id="description"></p>
+              <p id="author"></p>
+              <div id="buy-links"></div>
+            </div>
+          </div>
           <div class="container-btn-arrow-left-left">
             <svg id="btn-arrow-left-1" width="20px" height="20px">
               <use
@@ -51,9 +62,15 @@
               ></use>
             </svg>
           </div>
+          <div id="page-indicator">
+            Jesteś na stronie: <span id="currentPage">1</span>
+          </div>
+          <button onclick="changePage(1)">1</button>
+          <button onclick="changePage(2)">2</button>
+          <button onclick="changePage(3)">3</button>
         </div>
       </section>
     </main>
-    <script src="/src/partials/shopping-list.js"></script>
+    <script src="./shopping-list.js" type="module"></script>
   </body>
 </html>
