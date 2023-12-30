@@ -5,7 +5,8 @@
   justify-content: flex-start;
   align-items: flex-start;
   align-content: flex-start;
-  
+  background-color: var(--hero-background-color);
+
   // aside panels category list and support ukraine
   &__aside {
     flex-basis: 200px;
@@ -38,8 +39,6 @@
   }
   // &__aside-supportUkraine {
 
-   
-
   //   width: 356px;
   //   height: 474px;
   //   flex-shrink: 0;
@@ -51,7 +50,7 @@
   //   flex-direction: column;
   //   align-items: flex-start;
   //   gap: 20px;
-   
+
   // }
   // &__aside-supportUkraineItem {
   //   width: 131px;
@@ -59,6 +58,7 @@
   //   flex-shrink: 0;
   // }
   // main content blocks with categories and books informations
+
   &__main {
     flex-direction: column;
     align-items: flex-start;
@@ -127,34 +127,17 @@
   }
 }
 
-/* hero section for books category */ 
-
-.title-book {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: calc(38 / 32);
-  letter-spacing: -0.04em;
-  margin-top: 0;
-  margin-bottom: 40px;
-  
+[data-theme='dark'] .hero {
+  background-color: var(--hero-background-color-dark);
 }
 
-.title-book-span {
-  color: #4f2ee8;
-}
+/* hero section for books sections */
 
-.books-list {
-  margin-bottom: 40px;
-}
-
-.books-list-title {
-  font-size: 14px;
-  line-height: calc(18 / 14);
-  letter-spacing: 0.03em;
-  color: #b4afaf;
-  margin-top: 0;
-  margin-bottom: 18px;
-  text-transform: uppercase;
+@media screen and (min-width: 1440px) {
+  .best-sellers {
+    width: 996px;
+    border: 1px solid seagreen;
+  }
 }
 
 .books-card-container {
@@ -165,6 +148,72 @@
   overflow: hidden;
 }
 
+@media screen and (min-width: 768px) {
+  .books-card-container {
+    justify-content: space-between;
+    height: 366px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .books-card-container {
+    height: 306px;
+  }
+}
+
+.books-list {
+  margin-bottom: 40px;
+  border: 1px solid pink;
+}
+
+.title-book {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: calc(38 / 32);
+  letter-spacing: -0.04em;
+  color: var(--black);
+  margin-top: 0;
+  margin-bottom: 40px;
+}
+
+[data-theme='dark'] .title-book {
+  color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  .title-book {
+    font-size: 48px;
+    line-height: calc(52 / 48);
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .title-book {
+    font-size: 48px;
+    line-height: calc(52 / 48);
+  }
+}
+
+.title-book-span {
+  color: var(--purple);
+}
+
+.books-list-title {
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  letter-spacing: 0.03em;
+  color: var(--grey-400);
+  margin-top: 0;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .books-list-title {
+    line-height: calc(24 / 14);
+  }
+}
+
 .books-card {
   position: relative;
   overflow: hidden;
@@ -173,21 +222,61 @@
   margin-bottom: 14px;
 }
 
+.books-card-title-img {
+  display: block;
+  width: 335px;
+  height: 485px;
+}
+
+@media screen and (min-width: 768px) {
+  .books-card-title-img {
+    width: 218px;
+    height: 316px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .books-card-title-img {
+    width: 180px;
+    height: 256px;
+  }
+}
+
+.books-descr {
+  width: 335px;
+}
+
+@media screen and (min-width: 768px) {
+  .books-descr {
+    width: 218px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .books-descr {
+    width: 180px;
+  }
+}
+
 .books-card-title {
   font-size: 16px;
   line-height: calc(18 / 16);
   letter-spacing: -0.04em;
-  color: var(--text-secondary-color);
+  color: var(--black);
   margin-top: 0;
   margin-bottom: 4px;
   height: 18px;
   overflow: hidden;
 }
 
-.books-card-title-img {
-  display: block;
-  width: 335px;
-  height: 485px;
+[data-theme='dark'] .books-card-title {
+  color: var(--white);
+}
+
+@media screen and (min-width: 768px) {
+  .books-card-title {
+    line-height: calc(18 / 16);
+  }
 }
 
 .books-card-author {
@@ -196,8 +285,70 @@
   font-size: 12px;
   line-height: calc(14 / 12);
   letter-spacing: -0.04em;
-  color: #b4afaf;
+  color: var(--grey-400);
   margin: 0;
+}
+
+@media screen and (min-width: 1440px) {
+  .books-card-author {
+    height: 14px;
+    overflow: hidden;
+  }
+}
+
+.books-btn {
+  display: block;
+  margin-left: auto;
+  margin-top: 8px;
+  padding: 14px 28px;
+  border: 2px solid var(--purple);
+  border-radius: 40px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: calc(18 / 14);
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  color: black;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+@media screen and (min-width: 768px) {
+  .books-btn {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .books-btn {
+    margin-top: 32px;
+  }
+}
+
+.books-btn:hover,
+.books-btn:focus {
+  background-color: var(--purple);
+  color: #fff;
+}
+
+.books-btn:focus {
+  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
+}
+
+.books-item-link {
+  text-decoration: none;
+}
+
+@media screen and (min-width: 768px) {
+  .books-item-link {
+    width: 218px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .books-item-link {
+    width: 180px;
+  }
 }
 
 .books-overlay {
@@ -211,7 +362,7 @@
   height: 27%;
   opacity: 0;
 
-  background: #eac645;
+  background: var(--yellow);
   user-select: none;
 
   transition-duration: 250ms;
@@ -232,40 +383,20 @@
   transform: translate(-50%, -50%);
 }
 
-.books-descr {
-  width: 335px;
+.books-item-link:hover .books-overlay,
+.books-item-link:focus .books-overlay {
+  opacity: 1;
+  transform: translateY(0);
 }
 
-.books-btn {
-  display: block;
-  margin-left: auto;
-  margin-top: 8px;
-  padding: 14px 28px;
-  border: 2px solid #4f2ee8;
-  border-radius: 40px;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(18 / 14);
-  letter-spacing: -0.01em;
-  text-transform: uppercase;
-  color: var(--text-secondary-color);
-  cursor: pointer;
-  background-color: transparent;
+.books-list-title.active {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: calc(24 / 20);
+  color: var(--purple);
 }
 
-.books-btn:hover,
-.books-btn:focus {
-  background-color: #4f2ee8;
-  color: #fff;
-}
-
-.books-btn:focus{
-  box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
-}
-
-/* dark mode Styles for her section */
-
-[data-theme='dark'] .hero__main-booksBlockButton {
-  background-color: #111;
-  color: white;
+.books-card-container.active {
+  height: auto;
+  margin-bottom: 80px;
 }
