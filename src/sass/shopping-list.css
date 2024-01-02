@@ -27,6 +27,39 @@ body {
   display: flex;
 }
 
+/* --- Page is empty --- */
+
+.container-empty-page {
+  width: 350px;
+  height: 310px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.text-empty-list {
+  margin-bottom: 20px; /* Dodatkowy margines między tekstem a obrazkiem (możesz dostosować) */
+}
+
+.books-empty-page {
+  width: 322px;
+  height: 241px;
+}
+
+.text-empty-list > p {
+  padding-top: 100px;
+  color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: -0.36px;
+}
+
+.book-card {
+  display: none;
+}
 /* ---BOOK CARDS--- */
 .book-card-position {
   text-align: left;
@@ -173,4 +206,19 @@ body {
 .container-btns-pages {
   display: flex;
   text-align: center;
+}
+
+.container-btns-slider {
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  background-color: #f6f6f6;
+}
+
+.container-btns-slider.hidden {
+  display: none;
 }
