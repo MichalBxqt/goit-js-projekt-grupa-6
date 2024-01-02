@@ -33,7 +33,7 @@ body {
 }
 
 .book-card {
-  position: relative; /* Dodane position: relative; */
+  position: relative;
   text-align: left;
   max-width: 400px;
   border: 1px solid #ccc;
@@ -82,6 +82,21 @@ body {
 
 #btn-delete-book {
   fill: white;
+}
+
+/* --- logo amazon & book --- */
+.amazon-logo,
+.book-icon {
+  filter: grayscale(100%);
+  margin-right: 10px;
+}
+
+.container-logo-position {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
 }
 
 /* ---- BUTTONS_PAGES ---- */
