@@ -1,31 +1,57 @@
+const startTime = new Date().getTime();
+let interval = 1000;
 
-const modal = document.getElementById("myModal");
+function sprawdzElement() {
+    const elements = document.querySelectorAll(".books-item-link");
+    if (elements.length > 0) {
+        elements.forEach(function(element) {
+            element.removeEventListener('click', clickHandler);
+            element.addEventListener('click', clickHandler);
+        });
+        callback(elements);
+        return;
+    }
 
-const btn = document.getElementById("myBtn");
-
-const span = document.querySelector(".popup__close-button-span")
-
-//opening modal w
-btn.onclick = function() {
-  modal.style.display = "block";
+    if (new Date().getTime() - startTime > 5000) {
+        console.error("Przekroczono limit czasu. Żaden element nie został znaleziony.");
+    } else {
+        setTimeout(sprawdzElement, interval);
+    }
 }
 
-//closing modal with "X" button
-span.onclick = function() {
-  modal.style.display = "none";
+function clickHandler(event) {
+  const clickedElement = event.currentTarget;
+  const dataId = clickedElement.getAttribute('data-id');
+  console.log(`Id książki='${dataId}'`);
+
+  wyswietlModal();
 }
 
-// closing modal with clicking on background
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
+function wyswietlModal() {
+    const modal = document.getElementById('myModal');
+    if (modal) {
+        modal.style.display = 'block';
+
+        const span = document.querySelector(".popup__close-button-span");
+        const closeButton = document.getElementById("myBtn");
+
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+        document.addEventListener('keydown', function(event) {
+            event.preventDefault();
+            if (event.key === 'Escape') {
+                modal.style.display = "none";
+            }
+        });
+    }
 }
 
-// closing modal with esc 
-document.addEventListener('keydown', (event) => {
-  event.preventDefault()
-  if (event.key === 'Escape') {
-    modal.style.display = "none"
-  }
-})
+sprawdzElement();
