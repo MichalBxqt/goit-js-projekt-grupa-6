@@ -33,6 +33,7 @@ body {
 }
 
 .book-card {
+  position: relative; /* Dodane position: relative; */
   text-align: left;
   max-width: 400px;
   border: 1px solid #ccc;
@@ -60,6 +61,27 @@ body {
   margin-top: 10px;
   text-decoration: none;
   color: #007bff;
+}
+
+/* --- btn-delete-book --- */
+.container-btn-delete-book {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-width: 1px;
+  border-color: rgba(79, 46, 232, 1);
+  border-style: groove;
+  border-radius: 50%;
+  background-color: rgba(79, 46, 232, 1);
+  width: 30px;
+  height: 30px;
+}
+
+#btn-delete-book {
+  fill: white;
 }
 
 /* ---- BUTTONS_PAGES ---- */
