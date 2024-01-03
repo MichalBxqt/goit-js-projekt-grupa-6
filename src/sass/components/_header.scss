@@ -44,6 +44,7 @@
 }
 [data-theme='dark'] .header {
   background: var(--black);
+  border-color: var(--white);
 }
 .header__logo {
   display: flex;
@@ -197,11 +198,21 @@
     }
   }
 }
+
+
 [data-theme='dark'] .menu__link {
   color: var(--white);
   fill: var(--white);
 
 }
+[data-theme='dark'] .menu__link:hover,
+[data-theme='dark'] .menu__link:focus,
+[data-theme='dark'] .menu__link:active{
+  color: var(--black);
+  fill: var(--black);
+
+}
+
 .login-btn {
   display: flex;
   justify-content: space-between;
