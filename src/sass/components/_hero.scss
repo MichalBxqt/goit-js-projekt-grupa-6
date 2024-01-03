@@ -1,34 +1,35 @@
 .hero {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  //justify-content: flex-start;
+  //align-items: flex-start;
+  //align-content: flex-start;
   background-color: var(--hero-background-color);
-
+  padding-left: 20px;
+  padding-right: 20px;
   // aside panels category list and support ukraine
   &__aside {
-    flex-basis: 200px;
+    //flex-basis: 200px;
   }
-  &__aside-categorylist {
+  /*&__aside-categorylist {
     display: inline-flex;
     align-items: flex-start;
     gap: 20px;
     border: 5px dashed red;
     margin-left: 24px;
     margin-bottom: 86px;
-  }
-  &__aside-categorylist-list {
+  }*/
+  /*&__aside-categorylist-list {
     display: flex;
     width: 328px;
     flex-direction: column;
     align-items: flex-start;
     gap: 32px;
-  }
+  }*/
   &__aside-categorylist-item {
     width: 318px;
-    color: rgba(17, 17, 17, 0.6);
+    color: var(--black-cat);
 
     font-family: DM Sans;
     font-size: 18px;
@@ -63,9 +64,9 @@
     flex-direction: column;
     align-items: flex-start;
     gap: 18px;
-    border: 5px dashed red;
+    //border: 5px dashed red;
     margin-left: 40px;
-    color: #b4afaf;
+    color: var(--grey-400);
 
     font-family: DM Sans;
     font-size: 14px;
@@ -98,7 +99,7 @@
   }
 
   &__main-booksBlockTitle {
-    color: #111;
+    color: var(--black);
     font-family: DM Sans;
     font-size: 16px;
     font-style: normal;
@@ -108,7 +109,7 @@
   }
 
   &__main-booksBlockDesc {
-    color: #111;
+    color: var(--black);
 
     font-family: DM Sans;
     font-size: 12px;
@@ -123,7 +124,7 @@
     align-items: flex-start;
     gap: 10px;
     border-radius: 40px;
-    border: 2px solid #4f2ee8;
+    border: 2px solid var(--purple);
   }
 }
 
@@ -136,7 +137,7 @@
 @media screen and (min-width: 1440px) {
   .best-sellers {
     width: 996px;
-    border: 1px solid seagreen;
+    //border: 1px solid seagreen;
   }
 }
 
@@ -148,7 +149,7 @@
   overflow: hidden;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px)  {
   .books-card-container {
     justify-content: space-between;
     height: 366px;
@@ -163,7 +164,7 @@
 
 .books-list {
   margin-bottom: 40px;
-  border: 1px solid pink;
+  //border: 1px solid pink;
 }
 
 .title-book {
@@ -174,16 +175,18 @@
   color: var(--black);
   margin-top: 0;
   margin-bottom: 40px;
+  
 }
 
 [data-theme='dark'] .title-book {
   color: var(--white);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px)  {
   .title-book {
     font-size: 48px;
     line-height: calc(52 / 48);
+    margin-left: 32px;
   }
 }
 
@@ -191,6 +194,7 @@
   .title-book {
     font-size: 48px;
     line-height: calc(52 / 48);
+    padding-top: 40px;
   }
 }
 
@@ -208,7 +212,7 @@
   text-transform: uppercase;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px)  {
   .books-list-title {
     line-height: calc(24 / 14);
   }
@@ -228,7 +232,7 @@
   height: 485px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px)  {
   .books-card-title-img {
     width: 218px;
     height: 316px;
@@ -246,7 +250,7 @@
   width: 335px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px)  {
   .books-descr {
     width: 218px;
   }
@@ -273,7 +277,7 @@
   color: var(--white);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px)  {
   .books-card-title {
     line-height: calc(18 / 16);
   }
@@ -308,12 +312,12 @@
   line-height: calc(18 / 14);
   letter-spacing: -0.01em;
   text-transform: uppercase;
-  color: black;
+  color: var(--black);
   cursor: pointer;
   background-color: transparent;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px) {
   .books-btn {
     margin-top: 20px;
   }
@@ -328,18 +332,21 @@
 .books-btn:hover,
 .books-btn:focus {
   background-color: var(--purple);
-  color: #fff;
+  color: var(--white);
 }
 
 .books-btn:focus {
   box-shadow: 0px 4px 18px rgba(0, 0, 0, 0.15);
+}
+[data-theme='dark'] .books-btn {
+  color: var(--white);
 }
 
 .books-item-link {
   text-decoration: none;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1439px)  {
   .books-item-link {
     width: 218px;
   }
@@ -372,7 +379,7 @@
 .books-overlay-text {
   letter-spacing: -0.04em;
   text-transform: uppercase;
-  color: #111111;
+  color: var(--black);
   font-size: 14px;
   font-weight: 500;
   line-height: calc(18 / 14);
