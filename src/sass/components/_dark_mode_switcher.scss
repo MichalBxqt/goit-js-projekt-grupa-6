@@ -3,7 +3,7 @@
   margin-left: auto;
 }
 
-label {
+.switch {
   margin-left: 700px;
   width: 40px;
   height: 20px;
@@ -24,7 +24,7 @@ label {
   }
 }
 
-label:after {
+.switch:after {
 	content: "";
 	width: 18px;
 	height: 18px;
@@ -36,30 +36,30 @@ label:after {
 	box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
 }
 
-label p {
+.switch p {
 	display: none;
 }
 
-input {
+.dark {
 	width: 0;
 	height: 0;
 	visibility: hidden;
 }
 
-input:checked + label {
+.dark:checked + .switch {
 	background: linear-gradient(180deg, #4f2ee8 0%, #686868 100%);
 	box-shadow: 1px 1px 2px 0px rgba(0, 0, 0, 0.1) inset;
 	/* kolorystyka ściągnieta bezpośrednio z figma */
 }
 
-input:checked + label:after {
+.dark:checked + .switch:after {
 	right: 24px;
 	transform: translateX(110%);
 	background: rgba(255, 255, 255, 1), rgba(247, 247, 247, 1);
 }
 
-label,
-label:after {
+.switch,
+.switch:after {
 	transition: 0.3s;
 }
 
