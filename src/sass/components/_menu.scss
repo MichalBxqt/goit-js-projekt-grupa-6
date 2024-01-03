@@ -31,7 +31,9 @@
       display: none;
     }
   }
-  
+  [data-theme='dark'] .menu__icon-menu {
+    stroke: var(--white);
+    }
   .menu__substrate {
     display: none;
     position: fixed;
