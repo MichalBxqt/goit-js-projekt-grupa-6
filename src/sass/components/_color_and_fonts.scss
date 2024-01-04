@@ -1,21 +1,18 @@
-
-
-
 :root {
-  --regular: 400; 
-  --medium: 500; 
-  --bold: 700; 
+  --regular: 400;
+  --medium: 500;
+  --bold: 700;
   --italic: italic;
   --black: #111;
   --black-cat: rgba(17, 17, 17, 0.6);
   --white-cat: rgba(255, 255, 255, 0.6);
   --popup-background: #11111166;
-  --grey-400: #b4afaf;
+  --grey-400: rgb(180, 175, 175);
   --white: #ffffff;
   --purple: #4f2ee8;
-  --yellow: #EAC645;
+  --yellow: #eac645;
   --filter-light: 0%;
   --filter-dark: invert(100%);
-  --hero-background-color: #F6F6F6;
+  --hero-background-color: #f6f6f6;
   --hero-background-color-dark: #202024;
 }
