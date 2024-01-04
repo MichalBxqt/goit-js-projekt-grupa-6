@@ -1,0 +1,30 @@
+.main-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px 20px 0px 20px;
+
+}
+[data-theme='dark'] .main-container {
+    background-color: var(--hero-background-color-dark);
+  }
+
+
+@media screen and (min-width: 768px) and (max-width: 1439px){
+    .supp-cat-cont{
+        display: flex;
+        flex-direction: row;
+        gap: 32px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .main-container{
+        flex-direction: row;
+        align-items: flex-start;
+    }
+    .supp-cat-cont{
+        display: flex;
+        flex-direction: column;
+    }
+}
