@@ -1,6 +1,3 @@
-import { hideLoader, showLoader } from './loader.js';
-import SimpleBar from 'simplebar';
-
 const titleBooksList = document.querySelector('.books-list-title');
 const navList = document.querySelector('.categories__list');
 
@@ -46,9 +43,6 @@ export function onFiltred(event) {
   let cateroryName = event.target.dataset['filter'];
   let cateroryNamePart = cateroryName.split(' ').slice(0, -1).join(' ');
   let lastWord = cateroryName.split(' ').pop();
-
-  const dataMarkupTitle = `<h2>${cateroryNamePart} <span>${lastWord}</span></h2>`;
-  titleBooksList.innerHTML = dataMarkupTitle;
 
   removeActiveClass();
   event.target.classList.add('active');
