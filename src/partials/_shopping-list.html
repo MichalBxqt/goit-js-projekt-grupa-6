@@ -135,9 +135,81 @@
               </svg>
             </div>
           </div>
+<<<<<<< Updated upstream
         </div>
       </section>
     </main>
     <script src="./shopping-list.js" type="module"></script>
   </body>
 </html>
+=======
+          <img id="cover" alt="Okładka książki" />
+          <div class="book-details">
+            <h1 id="title"></h1>
+            <p id="category"></p>
+            <p id="description"></p>
+            <p id="author"></p>
+            <div id="buy-links"></div>
+          </div>
+          <div class="container-logo-position">
+            <img class="amazon-logo" src="/src/images/shopping-list/amazon.png" alt="amazon" width="48px"
+              height="15px" onclick="redirectToAmazon()" />
+            <img class="book-icon" src="/src/images/shopping-list/book.png" alt="book" width="28px" height="27px" />
+          </div>
+        </div>
+      </div>
+      <div class="container-btns-slider">
+        <div class="container-btn-arrow-left-left">
+          <svg id="btn-arrow-left-1" width="24px" height="24px">
+            <use href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"></use>
+          </svg>
+          <svg id="btn-arrow-left-2" width="24px" height="24px">
+            <use href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"></use>
+          </svg>
+        </div>
+        <div class="container-btn-arrow-left">
+          <svg id="btn-arrow-left-1" width="24px" height="24px">
+            <use href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"></use>
+          </svg>
+        </div>
+        <div class="container-btns-pages">
+          <button id="page-1" onclick="changePage(1)">1</button>
+          <button id="page-2" onclick="changePage(2)">2</button>
+          <button id="page-3" onclick="changePage(3)">3</button>
+          <button id="page-more" onclick="changePage(3)">...</button>
+        </div>
+        <div class="container-btn-arrow-right">
+          <svg id="btn-arrow-right-1" width="24px" height="24px">
+            <use href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"></use>
+          </svg>
+        </div>
+        <div class="container-btn-arrow-right-right">
+          <svg id="btn-arrow-right-1" width="24px" height="24px">
+            <use href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"></use>
+          </svg>
+          <svg id="btn-arrow-right-2" width="24px" height="24px">
+            <use href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="shopping"> <!-- wkład Michał Jurek -->
+      <div">
+        <h2>
+          <span>
+            ShoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooopingList</span>
+        </h2>
+        <ul>
+          <!-- robota robiona przez JS local storage -->
+        </ul>
+        </div>
+    </section>
+
+  </main>
+
+  <script src="./local-storage.js" type="module"></script>
+</body>
+
+</html>
+>>>>>>> Stashed changes
