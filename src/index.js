@@ -4,3 +4,4 @@ import './partials/create-books-markup';
 import './partials/get-books';
 import './partials/dark-mode-switch';
 import './partials/category';
+import './partials/shopping-list';
