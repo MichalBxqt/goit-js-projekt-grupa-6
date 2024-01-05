@@ -1,142 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="apple-mobile-web-app-title" content="Bookshelf" />
-    <meta name="application-name" content="Bookshelf" />
-    <meta name="msapplication-TileColor" content="#603cba" />
-    <meta name="msapplication-TileImage" content="favicon/mstile-144x144.png" />
-    <meta name="msapplication-config" content="favicon/browserconfig.xml" />
 
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@500;700&family=Montserrat:wght@400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="/src/sass/shopping-list.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="apple-mobile-web-app-title" content="Bookshelf" />
+  <meta name="application-name" content="Bookshelf" />
+  <meta name="msapplication-TileColor" content="#603cba" />
 
-    <!-- <script type="module" src="./index.js"></script> -->
-    <title>Page title</title>
-  </head>
-  <body>
-    <!-- Header -->
-    <include src="/src/partials/_header.html"></include>
-    <main>
-      <section class="section-shopping-list">
-        <div class="container container-shopping-list">
-          <h1 class="main-title-shoplist-hidden">
-            <div class="text-shopping">Shopping</div>
-            <div class="text-list">List</div>
-          </h1>
-          <!-- Support Ukraine -->
-          <div class="wrap-support">
-            <include src="/src/partials/_support-ukraine.html"></include>
-          </div>
-          <!-- My Shopping List  -->
-          <div class="book-card-position">
-            <div class="book-card">
-              <div class="btn-delete-position">
-                <div class="container-btn-delete-book">
-                  <svg id="btn-delete-book" width="18px" height="18px">
-                    <use href="/src/images/sprite.svg#icon-trash-03-1"></use>
-                  </svg>
-                </div>
-              </div>
-              <img id="cover" alt="Okładka książki" />
-              <div class="book-details">
-                <h1 id="title"></h1>
-                <p id="category"></p>
-                <p id="description"></p>
-                <p id="author"></p>
-                <div id="buy-links"></div>
-              </div>
-              <div class="container-logo-position">
-                <img
-                  class="amazon-logo"
-                  src="/src/images/shopping-list/amazon.png"
-                  alt="amazon"
-                  width="48px"
-                  height="15px"
-                />
-                <img
-                  class="book-icon"
-                  src="/src/images/shopping-list/book.png"
-                  alt="book"
-                  width="28px"
-                  height="27px"
-                />
-              </div>
-            </div>
-            <div class="book-card">
-              <img id="cover" alt="Okładka książki" />
-              <div class="book-details">
-                <h1 id="title"></h1>
-                <p id="category"></p>
-                <p id="description"></p>
-                <p id="author"></p>
-                <div id="buy-links"></div>
-              </div>
-            </div>
-            <div class="book-card">
-              <img id="cover" alt="Okładka książki" />
-              <div class="book-details">
-                <h1 id="title"></h1>
-                <p id="category"></p>
-                <p id="description"></p>
-                <p id="author"></p>
-                <div id="buy-links"></div>
-              </div>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Inter:wght@500;700&family=Montserrat:wght@400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="/src/sass/shopping-list.css" />
+
+  <!-- <script type="module" src="./index.js"></script> -->
+  <title>Page title</title>
+</head>
+
+<body>
+  <div class="body-container">
+    <include src="./partials/_header.html"></include>
+  </div>
+  <main>head
+    <div class="container container-shopping-list">
+      <h1 class="main-title-shoplist-hidden">
+        <div class="text-shopping">Shopping</div>
+        <div class="text-list">List</div>
+      </h1>
+      <!-- Support Ukraine -->
+      <div class="main-container">
+        <div class="supp-cat-cont">
+          <include src="./partials/_category.html"></include>
+          <include src="./partials/_support-ukraine.html"></include>
+        </div>
+      </div>
+      <!-- My Shopping List  -->
+      <div class="book-card-position">
+        <div class="book-card">
+          <div class="btn-delete-position">
+            <div class="container-btn-delete-book">
+              <svg id="btn-delete-book" width="18px" height="18px">
+                <use href="/src/images/sprite.svg#icon-trash-03-1"></use>
+              </svg>
             </div>
           </div>
-          <div class="container-btns-slider">
-            <div class="container-btn-arrow-left-left">
-              <svg id="btn-arrow-left-1" width="24px" height="24px">
-                <use
-                  href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"
-                ></use>
-              </svg>
-              <svg id="btn-arrow-left-2" width="24px" height="24px">
-                <use
-                  href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"
-                ></use>
-              </svg>
-            </div>
-            <div class="container-btn-arrow-left">
-              <svg id="btn-arrow-left-1" width="24px" height="24px">
-                <use
-                  href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"
-                ></use>
-              </svg>
-            </div>
-            <div class="container-btns-pages">
-              <button id="page-1" onclick="changePage(1)">1</button>
-              <button id="page-2" onclick="changePage(2)">2</button>
-              <button id="page-3" onclick="changePage(3)">3</button>
-              <button id="page-more" onclick="changePage(3)">...</button>
-            </div>
-            <div class="container-btn-arrow-right">
-              <svg id="btn-arrow-right-1" width="24px" height="24px">
-                <use
-                  href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"
-                ></use>
-              </svg>
-            </div>
-            <div class="container-btn-arrow-right-right">
-              <svg id="btn-arrow-right-1" width="24px" height="24px">
-                <use
-                  href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"
-                ></use>
-              </svg>
-              <svg id="btn-arrow-right-2" width="24px" height="24px">
-                <use
-                  href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"
-                ></use>
-              </svg>
-            </div>
+          <img id="cover" alt="Okładka książki" />
+          <div class="book-details">
+            <h1 id="title"></h1>
+            <p id="category"></p>
+            <p id="description"></p>
+            <p id="author"></p>
+            <div id="buy-links"></div>
+          </div>
+          <div class="container-logo-position">
+            <img class="amazon-logo" src="/src/images/shopping-list/amazon.png" alt="amazon" width="48px"
+              height="15px" />
+            <img class="book-icon" src="/src/images/shopping-list/book.png" alt="book" width="28px" height="27px" />
           </div>
         </div>
-      </section>
-    </main>
-    <script src="./shopping-list.js" type="module"></script>
-  </body>
+        <div class="book-card">
+          <img id="cover" alt="Okładka książki" />
+          <div class="book-details">
+            <h1 id="title"></h1>
+            <p id="category"></p>
+            <p id="description"></p>
+            <p id="author"></p>
+            <div id="buy-links"></div>
+          </div>
+        </div>
+        <div class="book-card">
+          <img id="cover" alt="Okładka książki" />
+          <div class="book-details">
+            <h1 id="title"></h1>
+            <p id="category"></p>
+            <p id="description"></p>
+            <p id="author"></p>
+            <div id="buy-links"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container-btns-slider">
+        <div class="container-btn-arrow-left-left">
+          <svg id="btn-arrow-left-1" width="24px" height="24px">
+            <use href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"></use>
+          </svg>
+          <svg id="btn-arrow-left-2" width="24px" height="24px">
+            <use href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"></use>
+          </svg>
+        </div>
+        <div class="container-btn-arrow-left">
+          <svg id="btn-arrow-left-1" width="24px" height="24px">
+            <use href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"></use>
+          </svg>
+        </div>
+        <div class="container-btns-pages">
+          <button id="page-1" onclick="changePage(1)">1</button>
+          <button id="page-2" onclick="changePage(2)">2</button>
+          <button id="page-3" onclick="changePage(3)">3</button>
+          <button id="page-more" onclick="changePage(3)">...</button>
+        </div>
+        <div class="container-btn-arrow-right">
+          <svg id="btn-arrow-right-1" width="24px" height="24px">
+            <use href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"></use>
+          </svg>
+        </div>
+        <div class="container-btn-arrow-right-right">
+          <svg id="btn-arrow-right-1" width="24px" height="24px">
+            <use href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"></use>
+          </svg>
+          <svg id="btn-arrow-right-2" width="24px" height="24px">
+            <use href="/src/images/sprite.svg#icon-fi-rr-angle-small-left"></use>
+          </svg>
+        </div>
+      </div>
+    </div>
+    </section>
+    <section class="shopping"> <!-- wkład Michał Jurek -->
+      <div">
+        <h2>
+          <span>
+            ShoooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooopingList</span>
+        </h2>
+        <ul>
+          <!-- robota robiona przez JS local storage -->
+        </ul>
+        </div>
+    </section>
+
+  </main>
+  <script src="./local-storage.js" type="module"></script>
+</body>
+
 </html>
