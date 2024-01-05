@@ -114,11 +114,7 @@ async function fetchBooks() {
 // Wywołanie funkcji pobierania książek z API
 fetchBooks();
 
-<<<<<<< Updated upstream
-// --- amazon link --- //
-=======
 // --- open Amazon link --- //
->>>>>>> Stashed changes
 function redirectToAmazon() {
   window.location.href = 'https://www.amazon.pl/';
 }
