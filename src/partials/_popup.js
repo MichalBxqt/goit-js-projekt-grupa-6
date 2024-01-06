@@ -9,7 +9,6 @@ function sprawdzElement() {
       element.removeEventListener('click', clickHandler);
       element.addEventListener('click', clickHandler);
     });
-    callback(elements);
     return;
   }
 
