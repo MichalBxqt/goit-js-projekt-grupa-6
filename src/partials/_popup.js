@@ -1,5 +1,6 @@
 const startTime = new Date().getTime();
 let interval = 1000;
+let currentBookData = {};
 
 function sprawdzElement() {
   const elements = document.querySelectorAll('.books-item-link');
@@ -23,9 +24,15 @@ function sprawdzElement() {
 
 function clickHandler(event) {
   const clickedElement = event.currentTarget;
-  const dataId = clickedElement.getAttribute('data-id');
-  console.log(`Id książki='${dataId}'`);
-
+  currentBookData = {
+    title: clickedElement.querySelector('.books-card-title').innerText,
+    author: clickedElement.querySelector('.books-card-author').innerText,
+    description: 'Tutaj dodaj opis książki...',
+    book_image: clickedElement
+      .querySelector('.books-card-title-img')
+      .getAttribute('src'),
+    amazon_product_url: 'https://www.amazon.com/',
+  };
   wyswietlModal();
 }
 
@@ -34,9 +41,20 @@ function wyswietlModal() {
   if (modal) {
     modal.style.display = 'block';
 
-    const span = document.querySelector('.popup__close-button-span');
-    const closeButton = document.getElementById('myBtn');
+    // zawartość popupa danymi z aktualnie klikniętej książki
+    document.querySelector('.popup__img').src = currentBookData.book_image;
+    document.querySelector('.popup__info-title').innerText =
+      currentBookData.title;
+    document.querySelector('.popup__info-name').innerText =
+      currentBookData.author;
+    document.querySelector('.popup__info-desc').innerText =
+      currentBookData.description;
+    document.querySelector('.popup__info-link').innerText =
+      'Zobacz na Amazonie';
+    document.querySelector('.popup__info-link').href =
+      currentBookData.amazon_product_url;
 
+    const span = document.querySelector('.popup__close-button-span');
     span.onclick = function () {
       modal.style.display = 'none';
     };
@@ -56,8 +74,6 @@ function wyswietlModal() {
   }
 }
 
-sprawdzElement();
-
 // event listener dla przycisku w popupie
 document.addEventListener('DOMContentLoaded', function () {
   document
@@ -70,26 +86,14 @@ document
   .addEventListener('click', addToShoppingList);
 
 function addToShoppingList() {
-  const book = {
-    title: 'TYTUŁ KSIĄŻKI',
-    author: 'Imie nazwisko pisarza',
-    description: 'Lorem ipsum...',
+  const shoppingList = [];
+  shoppingList.push(currentBookData);
 
-    book_image: 'URL_do_okładki',
-    amazon_product_url: 'link_do_amazona',
-    buy_links: [
-      {
-        url: 'link_do_amazona',
-      },
-      {
-        url: 'link_do_apple_books',
-      },
-    ],
-  };
+  // miejsce na logikę związaną z dodawaniem do listy zakupów
 
-  shoppingList.push(book);
+  // localStorage.setItem(SHOPPING_LIST_STORAGE_KEY, JSON.stringify(shoppingList));
 
-  localStorage.setItem(SHOPPING_LIST_STORAGE_KEY, JSON.stringify(shoppingList));
-
-  renderMarkUp();
+  // renderMarkUp(); // Zakładam, że masz gdzieś zdefiniowaną funkcję `renderMarkUp`
 }
+
+sprawdzElement();
