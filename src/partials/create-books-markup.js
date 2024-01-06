@@ -1,4 +1,6 @@
+import { showModal } from './_popup';
 import { createCategoryMarkup } from './best-sellers';
+
 const bestCategories = document.querySelector('.best-sellers');
 
 export function createGalleryItem(data) {
@@ -65,13 +67,28 @@ export function onSeeMoreBtn(e) {
   const listId = e.target.dataset.id;
   createCategoryMarkup(listId);
 }
+
 export function onBookClick(e) {
   e.preventDefault();
   const bookId = e.currentTarget.dataset.id;
+  const bookTitle =
+    e.currentTarget.querySelector('.books-card-title').textContent;
+  const bookImage = e.currentTarget.querySelector('.books-card-title-img').src;
+  const bookAuthor =
+    e.currentTarget.querySelector('.books-card-author').textContent;
+
+  const bookInfo = {
+    title: bookTitle,
+    book_image: bookImage,
+    author: bookAuthor,
+    // Dodaj inne informacje o książce, jeśli są dostępne
+  };
+
+  showModal(bookInfo);
 }
 
 export function createAllBookInCategory(data) {
-  const booksMarkup = data
+  let booksMarkup = data
     .map(
       book => `<a href="#" class="books-item-link" aria-label="books-item-link" rel="noopener noreferrer" data-id='${book._id}'>
       
@@ -97,4 +114,24 @@ export function createAllBookInCategory(data) {
     .join('');
 
   return booksMarkup;
+}
+
+export function onBookClick(e) {
+  e.preventDefault();
+  const bookId = e.currentTarget.dataset.id;
+  const bookTitle =
+    e.currentTarget.querySelector('.books-card-title').textContent;
+  const bookImage = e.currentTarget.querySelector('.books-card-title-img').src;
+  const bookAuthor =
+    e.currentTarget.querySelector('.books-card-author').textContent;
+  // Pobierz więcej informacji o książce, jeśli to konieczne
+
+  const bookInfo = {
+    title: bookTitle,
+    book_image: bookImage,
+    author: bookAuthor,
+    // Dodaj inne informacje o książce, jeśli są dostępne
+  };
+
+  showModal(bookInfo);
 }

@@ -1,3 +1,34 @@
+export function showModal(book) {
+  const modalContent = `
+    <div class="modal">
+      <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <h2>${book.title}</h2>
+        <img src="${book.book_image}" alt="${book.title}" />
+        <p><strong>Autor:</strong> ${book.author}</p>
+        <p><strong>Opis:</strong> ${book.description}</p>
+        <!-- Dodaj inne informacje o książce, jeśli są dostępne -->
+      </div>
+    </div>
+  `;
+
+  // Dodaj modal do body
+  document.body.insertAdjacentHTML('beforeend', modalContent);
+
+  // Zamknij modal po kliknięciu w przycisk zamknięcia
+  const closeButton = document.querySelector('.close-button');
+  closeButton.addEventListener('click', () => {
+    document.querySelector('.modal').remove();
+  });
+}
+
+
+
+
+
+/*
+
+___________________________________________________________________
 const startTime = new Date().getTime();
 let interval = 1000;
 
@@ -93,3 +124,5 @@ function addToShoppingList() {
 
   renderMarkUp();
 }
+
+*/
