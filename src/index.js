@@ -5,7 +5,6 @@ import './partials/get-books';
 import './partials/dark-mode-switch';
 import './partials/category';
 import './partials/_popup';
-import './partials/local-storage';
 import './partials/shopping-list';
 
 

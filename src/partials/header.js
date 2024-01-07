@@ -13,7 +13,7 @@ function menuButtonClick() {
   toggleClass(login, 'is-open');
   toggleClass(logout, 'is-open');
   toggleClass(substrate, 'is-open');
-//   toggleClass(scrollup, 'is-hidden');
+  //   toggleClass(scrollup, 'is-hidden');
 
   const expanded = menuButton.getAttribute('aria-expanded');
   menuButton.setAttribute(
@@ -35,16 +35,15 @@ function logoutShow() {
   logout.classList.toggle('is-open');
 }
 
-
 function addCurrentClassToMenuLink() {
-    var path = window.location.pathname;
-    var menuLinks = document.querySelectorAll('.menu__link');
-    menuLinks.forEach(function(link) {
-      var linkPath = link.getAttribute('href');
-      if (path === linkPath) {
-        link.classList.add('menu__link--current');
-      }
-    });
-  }
-  
-  addCurrentClassToMenuLink();
+  var path = window.location.pathname;
+  var menuLinks = document.querySelectorAll('.menu__link');
+  menuLinks.forEach(function (link) {
+    var linkPath = link.getAttribute('href');
+    if (path === linkPath) {
+      link.classList.add('menu__link--current');
+    }
+  });
+}
+
+addCurrentClassToMenuLink();
