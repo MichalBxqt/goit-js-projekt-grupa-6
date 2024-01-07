@@ -108,6 +108,31 @@
     margin-top: 20.5px;
   }
 
+  &__info-link-amazon {
+    display: inline-block;
+    background: lightgray 0.741px 0px / 97.61% 100% no-repeat;
+    mix-blend-mode: luminosity;
+    background-color: transparent;
+  }
+
+ &__info-link-amazon img {
+    width: 62px;
+    height: 19px;
+    flex-shrink: 0;
+  }
+
+  &__info-link-book {
+    display: inline-block;
+    background: lightgray 0.741px 0px / 97.61% 100% no-repeat;
+    mix-blend-mode: luminosity;
+    background-color: transparent;
+  }
+
+  &__info-link-book img {
+    width: 33px;
+    height: 32px;
+  }
+
   &__button {
     display: flex;
     width: 211px;
@@ -120,6 +145,30 @@
     margin-left: 62px;
     margin-top: 44px;
   }
+}
+
+[data-theme='dark'] .popup__content {
+  border: 2px solid var(--white);
+  background: var(--hero-background-color-dark);
+}
+
+[data-theme='dark'] .popup__info-title {
+  color: var(--white);
+}
+
+[data-theme='dark'] .popup__info-desc {
+  color: var(--white);
+}
+
+[data-theme='dark'] .popup__button {
+  background: var(--hero-background-color-dark);
+  color: var(--white);}
+
+  [data-theme='dark'] .popup__info-link-amazon {
+    display: block;
+    background-color: lightgray;
+    padding: 4px;
+    border-radius: 10px;
 }
 
 @media (min-width: 768px) {
@@ -158,7 +207,7 @@
       height: 28px;
       flex-shrink: 0;
     }
-    &__book-value{
+    &__book-value {
       flex-direction: row;
       align-items: flex-start;
       gap: 24px;
