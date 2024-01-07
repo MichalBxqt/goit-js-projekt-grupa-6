@@ -140,6 +140,7 @@
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
+  &:active,
   &:focus,
   &:visited {
     background-color: var(--yellow);
@@ -213,6 +214,7 @@
   justify-content: space-between;
   align-items: center;
   margin-top: 10px;
+  margin-bottom: 10px;
   padding-right: 20px;
   // padding: 4px 12px 4px 12px;
   width: 184px;
