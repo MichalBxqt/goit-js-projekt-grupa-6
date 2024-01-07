@@ -48,9 +48,9 @@ function wyswietlModal() {
       currentBookData.author;
     document.querySelector('.popup__info-desc').innerText =
       currentBookData.description;
-    document.querySelector('.popup__info-link').innerText =
+    document.querySelector('.popup__info-link-book').href =
       'Zobacz na Amazonie';
-    document.querySelector('.popup__info-link').href =
+    document.querySelector('.popup__info-link-amazon').href =
       currentBookData.amazon_product_url;
 
     const span = document.querySelector('.popup__close-button-span');

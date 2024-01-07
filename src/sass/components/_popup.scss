@@ -158,14 +158,23 @@
       height: 28px;
       flex-shrink: 0;
     }
+    &__book-value{
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 24px;
+      display: flex;
+    }
+
+    &__img-wrap {
+      flex-shrink: 0;
+      border-radius: 8px;
+      margin-left: 40px;
+    }
 
     &__img {
       width: 192px;
       height: 281px;
-      flex-shrink: 0;
-      border-radius: 8px;
-      margin-left: 40px;
-      margin-right: 24px;
+      margin-left: 0px;
     }
 
     &__info {
