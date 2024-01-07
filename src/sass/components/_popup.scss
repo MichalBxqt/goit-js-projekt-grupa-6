@@ -115,7 +115,7 @@
     background-color: transparent;
   }
 
- &__info-link-amazon img {
+  &__info-link-amazon img {
     width: 62px;
     height: 19px;
     flex-shrink: 0;
@@ -162,13 +162,21 @@
 
 [data-theme='dark'] .popup__button {
   background: var(--hero-background-color-dark);
-  color: var(--white);}
+  color: var(--white);
+}
 
-  [data-theme='dark'] .popup__info-link-amazon {
-    display: block;
-    background-color: lightgray;
-    padding: 4px;
-    border-radius: 10px;
+[data-theme='dark']
+  span.popup__close-button-span
+  svg.popup__close-button-svg
+  path {
+  stroke: var(--white);
+}
+
+[data-theme='dark'] .popup__info-link-amazon {
+  display: block;
+  background-color: lightgray;
+  padding: 4px;
+  border-radius: 10px;
 }
 
 @media (min-width: 768px) {
