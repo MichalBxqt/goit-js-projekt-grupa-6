@@ -124,3 +124,20 @@
   background-color: #f9f9f9;
   border-radius: 5px;
 }
+
+.booksCat{
+  display: flex;
+  gap: 24px;
+  flex-wrap: wrap;
+  //height: 535px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1439px)  {
+  .booksCat {
+    justify-content: space-between;
+    
+    gap: 0px;
+  }
+}
+
