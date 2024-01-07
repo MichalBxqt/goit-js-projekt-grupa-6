@@ -1,2 +1,0 @@
-let t=document.getElementById("darkSwitch");window.addEventListener("load",function(){let e;t&&(e=null!==localStorage.getItem("darkSwitch")&&"dark"===localStorage.getItem("darkSwitch"),t.checked=e,e?document.body.setAttribute("data-theme","dark"):document.body.removeAttribute("data-theme"),t.addEventListener("change",function(){t.checked?(document.body.setAttribute("data-theme","dark"),localStorage.setItem("darkSwitch","dark")):(document.body.removeAttribute("data-theme"),localStorage.removeItem("darkSwitch"))}))});
-//# sourceMappingURL=index.adf0c7a7.js.map
