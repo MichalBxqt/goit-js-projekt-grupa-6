@@ -1,5 +1,5 @@
 
-  @media (width < 768px) {
+ @media (width < 768px) {
     .menu__icon {
     //  position: fixed;
       stroke: var(--black);
@@ -38,7 +38,7 @@
       }
   }
   
-  .menu__substrate {
+.menu__substrate {
     display: none;
     position: fixed;
     top: 64px;
