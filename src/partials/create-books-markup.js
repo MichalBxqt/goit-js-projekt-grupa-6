@@ -1,4 +1,5 @@
 import { createCategoryMarkup } from './best-sellers';
+import { wyswietlModal } from "./_popup";
 const bestCategories = document.querySelector('.best-sellers');
 
 export function createGalleryItem(data) {
@@ -56,9 +57,9 @@ export function createGalleryItem(data) {
     btn.addEventListener('click', onSeeMoreBtn);
   });
 
-  homeBookLink.forEach(book => {
-    book.addEventListener('click', onBookClick);
-  });
+homeBookLink.forEach(book => {
+  book.addEventListener('click', onBookClick);
+});
 }
 
 export function onSeeMoreBtn(e) {
@@ -67,7 +68,7 @@ export function onSeeMoreBtn(e) {
 }
 export function onBookClick(e) {
   e.preventDefault();
-  const bookId = e.currentTarget.dataset.id;
+  wyswietlModal(e.currentTarget.dataset.id);
 }
 
 export function createAllBookInCategory(data) {

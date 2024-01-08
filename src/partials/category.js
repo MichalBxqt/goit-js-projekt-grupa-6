@@ -1,4 +1,4 @@
-import { all } from "axios";
+import { onBookClick } from "./create-books-markup";
 
 // Czekaj na załadowanie całej strony przed wykonaniem kodu
 document.addEventListener('DOMContentLoaded', () => {
@@ -85,6 +85,11 @@ booksMarkup += `</div>`;
   titleBooksList.innerHTML = booksMarkup; // Wstawienie wyrenderowanych książek do odpowiedniego miejsca w DOM
   
   bestSellers.style.display = 'none';
+
+  const homeBookLink = document.querySelectorAll('.books-item-link');
+homeBookLink.forEach(book => {
+  book.addEventListener('click', onBookClick);
+});
 }
 
 // Renderowanie listy kategorii na podstawie dostarczonych danych
@@ -127,3 +132,4 @@ function fetchBooksByCategory(category) {
     return response.json();
   });
 }
+

@@ -27,3 +27,17 @@ export async function getCategoryBooks(category) {
     );
   }
 }
+
+export async function getBook(id) {
+  try {
+    const { data } = await Axios(
+      `https://books-backend.p.goit.global/books/${id}`,
+      {}
+    );
+    return data;
+  } catch (error) {
+    alert(
+      `Oops! Something went wrong. You caught the following error: ${error.message}.`
+    );
+  }
+}
