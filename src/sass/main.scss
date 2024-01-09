@@ -8,7 +8,7 @@
 @import 'components/container_and_mixin';
 @import 'components/dark_mode_switcher';
 @import 'components/support-ukraine';
-// @import 'components/loader';
+@import 'components/loader';
 @import 'components/header';
 @import 'components/menu';
 @import 'components/is-hidden';
@@ -18,4 +18,5 @@
 
 @import 'components/dark_mode_switcher';
 @import 'components/popup';
-@import 'components/reg-window'
+@import 'components/reg-window';
+@import 'components/scroll-up';
