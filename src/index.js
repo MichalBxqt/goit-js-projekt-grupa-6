@@ -6,5 +6,4 @@ import './partials/dark-mode-switch';
 import './partials/category';
 import './partials/_popup';
 import './partials/shopping-list';
-
-
+import './partials/shopping-utils';
